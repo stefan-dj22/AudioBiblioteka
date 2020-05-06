@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D692EF6F-9BE2-4F94-8B8C-823E253EB143}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AudioBibliotekaProject</RootNamespace>
+    <AssemblyName>AudioBibliotekaProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABKarticaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ABKarticaControl.Designer.cs">
+      <DependentUpon>ABKarticaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AudioBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AudioBookForm.Designer.cs">
+      <DependentUpon>AudioBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookLibary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookLibary.Designer.cs">
+      <DependentUpon>BookLibary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClanoviForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClanoviForm.Designer.cs">
+      <DependentUpon>ClanoviForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entieti\Admin.cs" />
+    <Compile Include="Entieti\AudioBook.cs" />
+    <Compile Include="Entieti\Comment.cs" />
+    <Compile Include="Entieti\Entity.cs" />
+    <Compile Include="Entieti\Inbox.cs" />
+    <Compile Include="Entieti\Message.cs" />
+    <Compile Include="KlijentKarticaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KlijentKarticaControl.Designer.cs">
+      <DependentUpon>KlijentKarticaControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookListControl.Designer.cs">
+      <DependentUpon>BookListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mongoDB.cs" />
+    <Compile Include="Entieti\Member.cs" />
+    <Compile Include="Entieti\Rate.cs" />
+    <Compile Include="Entieti\Review.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlavniMeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlavniMeni.Designer.cs">
+      <DependentUpon>GlavniMeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordHash.cs" />
+    <Compile Include="ProfilControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProfilControl.Designer.cs">
+      <DependentUpon>ProfilControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registracija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registracija.Designer.cs">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReviewControl.Designer.cs">
+      <DependentUpon>ReviewControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ABKarticaControl.resx">
+      <DependentUpon>ABKarticaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AudioBookForm.resx">
+      <DependentUpon>AudioBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookLibary.resx">
+      <DependentUpon>BookLibary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClanoviForm.resx">
+      <DependentUpon>ClanoviForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlavniMeni.resx">
+      <DependentUpon>GlavniMeni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KlijentKarticaControl.resx">
+      <DependentUpon>KlijentKarticaControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookListControl.resx">
+      <DependentUpon>BookListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfilControl.resx">
+      <DependentUpon>ProfilControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registracija.resx">
+      <DependentUpon>Registracija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewControl.resx">
+      <DependentUpon>ReviewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\like.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dislike.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
